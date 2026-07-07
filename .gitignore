@@ -1,0 +1,24 @@
+# --- Private / local-only files (never published to GitHub Pages) ---
+# Anything inside a folder named "private" stays on your machine only.
+private/
+assets/private/
+
+# Extra / unused profile photos (site only uses assets/profile.jpeg)
+assets/profile2.jpeg
+assets/profile3.jpeg
+README.md
+# Draft data & documents you don't want public
+*.draft
+*.draft.*
+drafts/
+*.xlsx
+*.csv
+*.dat
+*.docx
+
+# OS / editor junk
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+.vscode/
