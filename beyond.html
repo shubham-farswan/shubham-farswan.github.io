@@ -80,21 +80,47 @@
         <h2 class="section__title reveal">Selected projects</h2>
         <div class="reveal">
           <p class="section__lead">
-            Add a few projects here as you go — a short title, one line on what it
-            does, and a link. For now, they live on my
+            Both of these grew out of everyday problems in the lab — an instrument that
+            was tedious to drive by hand, and an analysis that was being rebuilt from
+            scratch for every new sample. They live on my
             <a href="https://github.com/shubham-farswan" target="_blank" rel="noopener">GitHub</a>.
           </p>
         </div>
         <div class="cards">
           <article class="card reveal">
-            <h3>Project name</h3>
-            <p>One-line description of what it does and the tech used.</p>
-            <p style="margin-top:0.75rem"><a href="https://github.com/shubham-farswan" target="_blank" rel="noopener">Repo →</a></p>
+            <h3>Lake Shore 335 Controller GUI</h3>
+            <p>
+              A standalone Windows desktop application for the Lake Shore Model 335
+              cryogenic temperature controller, written in Python with PyQt5. It scans for
+              available COM ports, connects to the instrument over serial, and polls it in
+              the background so the window stays responsive while a measurement runs. Both
+              sensor inputs are read live and plotted against time, and the setpoint, PID
+              terms, ramp rate and heater range can all be changed from the application
+              instead of the front panel. Instrument communication lives in its own module,
+              separate from the interface, and the whole thing is packaged with PyInstaller
+              so it runs on a lab machine with no Python installed.
+            </p>
+            <p style="margin-top:0.75rem"><em>Python · PyQt5 · pySerial · Matplotlib · PyInstaller</em></p>
+            <p style="margin-top:0.5rem"><a href="https://github.com/shubham-farswan/lakeshore-335-gui" target="_blank" rel="noopener">Repo →</a></p>
           </article>
           <article class="card reveal">
-            <h3>Project name</h3>
-            <p>One-line description of what it does and the tech used.</p>
-            <p style="margin-top:0.75rem"><a href="https://github.com/shubham-farswan" target="_blank" rel="noopener">Repo →</a></p>
+            <h3>RamanSuite</h3>
+            <p>
+              A general-purpose Raman spectroscopy analysis application for MATLAB, built
+              around a single data structure that covers a spectral series taken against
+              any variable — temperature, pressure, electric field — so an analysis
+              written once works on all of them. The window is a six-stage pipeline: load
+              a folder of spectra, correct them (dark, wavenumber calibration, instrument
+              response, Bose factor), fit a composite model to every spectrum, follow each
+              peak across the series with quality flags, fit the temperature dependence
+              with anharmonic and order-parameter models, and export a publication figure
+              together with the numbers behind it. The interface is a thin shell over a
+              library, so every button is a function that can also be called from a script.
+              Every folder of output carries a record of exactly what produced it, and
+              nothing is silently overwritten.
+            </p>
+            <p style="margin-top:0.75rem"><em>MATLAB · programmatic app · curve fitting · instrument-agnostic file I/O</em></p>
+            <p style="margin-top:0.5rem"><a href="https://github.com/shubham-farswan/RamanSuite" target="_blank" rel="noopener">Repo →</a></p>
           </article>
         </div>
       </div>
