@@ -3,21 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shubham Farswan  Low-Temperature Raman Spectroscopy of Quantum Materials</title>
-  <meta name="description" content="Shubham Farswan — PhD research scholar at IIT Delhi studying multiferroics and quantum spin liquid candidates with low-temperature Raman spectroscopy." />
-  <meta property="og:title" content="Shubham Farswan — Quantum Materials & Raman Spectroscopy" />
+  <title>Shubham Farswan - Low-Temperature Raman Spectroscopy of Quantum Materials</title>
+  <meta name="description" content="Shubham Farswan, PhD research scholar at IIT Delhi studying multiferroics and quantum spin liquid candidates with low-temperature Raman spectroscopy." />
+  <meta property="og:title" content="Shubham Farswan - Quantum Materials &amp; Raman Spectroscopy" />
   <meta property="og:description" content="PhD research scholar at IIT Delhi: low-temperature Raman spectroscopy of multiferroics and quantum spin liquid candidates." />
   <meta property="og:type" content="website" />
+  <meta name="color-scheme" content="light dark" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header class="site-header">
     <nav class="nav">
-      <a class="nav__brand" href="index.html">Shubham Farswan</a>
+      <a class="nav__brand" href="index.html" aria-label="Shubham Farswan, home">SF</a>
       <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -33,39 +34,33 @@
 
   <main>
     <!-- HERO -->
-    <div class="hero-band">
-      <canvas class="particles" aria-hidden="true"></canvas>
-      <section class="hero">
-        <div class="hero__photo reveal">
-          <img src="assets/profile.jpeg" alt="Portrait of Shubham Farswan"
-               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-          <div class="hero__photo-fallback" aria-hidden="true">SF</div>
-        </div>
-        <div class="hero__intro reveal">
-          <h1>Shubham Farswan</h1>
-          <p class="hero__role">PhD Research Scholar · Experimental Condensed Matter Physics</p>
-          <p class="hero__affil">Department of Physics, Indian Institute of Technology Delhi</p>
-          <p class="hero__blurb">
-            I grow and probe quantum materials - thin films by pulsed laser
-            deposition and low-temperature Raman spectroscopy - focusing on
-            multiferroics and quantum spin liquid candidates.
-          </p>
-          <div class="hero__links">
-            <a class="btn" href="mailto:shubham.phy14@gmail.com">Email</a>
-            <a class="btn btn--ghost" href="assets/cv.pdf">CV (PDF)</a>
-            <a class="btn btn--ghost" href="https://scholar.google.com/citations?user=ZnzBCkEAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
-            <a class="btn btn--ghost" href="https://www.linkedin.com/in/shubham-farswan-15290a195/" target="_blank" rel="noopener">LinkedIn</a>
-            <a class="btn btn--ghost" href="https://github.com/shubham-farswan" target="_blank" rel="noopener">GitHub</a>
+    <section class="hero container">
+      <h1 class="display"><span>Shubham</span><span>Farswan</span></h1>
+      <div class="hero__row">
+        <div>
+          <p class="hero__sub">Experimental physicist studying <mark>quantum materials</mark> with low-temperature Raman light scattering.</p>
+          <div class="actions">
+            <a class="cta" href="mailto:shubham.phy14@gmail.com">Email me <i aria-hidden="true">&#8599;</i></a>
+            <a href="assets/cv.pdf">Download CV</a>
           </div>
         </div>
-      </section>
-    </div>
+        <p class="hero__meta">
+          PhD research scholar, Department of Physics, Indian Institute of Technology Delhi.
+          Advised by Dr. Kaushik Sen.
+        </p>
+        <div>
+          <img class="portrait" src="assets/profile.jpeg" alt="Portrait of Shubham Farswan"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
+          <div class="portrait-fallback" aria-hidden="true">SF</div>
+        </div>
+      </div>
+    </section>
 
     <!-- ABOUT -->
-    <section id="about" class="section">
-      <div class="container">
-        <h2 class="section__title reveal">About</h2>
-        <div class="reveal">
+    <section id="about" class="section container">
+      <h2 class="section__title reveal">About</h2>
+      <div class="about reveal">
+        <div class="prose">
           <p>
             I am a fourth-year PhD research scholar in the Department of Physics at
             the Indian Institute of Technology (IIT) Delhi, advised by
@@ -80,65 +75,97 @@
             -->
           </p>
           <p>
-            I am especially interested in <strong>multiferroics</strong> - where
-            magnetism and ferroelectricity coexist and couple and in
+            I am especially interested in <strong>multiferroics</strong>, where
+            magnetism and ferroelectricity coexist and couple, and in
             <strong>quantum spin liquid candidates</strong>, whose exotic magnetic
             ground states leave subtle fingerprints in their Raman response.
             Alongside physics, I enjoy building things: electronics, software,
             and embedded systems (see <a href="beyond.html">Beyond the Lab</a>).
           </p>
-          <ul class="facts">
-            <li><strong>Advisor:</strong> Dr. Kaushik Sen</li>
-            <li><strong>Institute:</strong> IIT Delhi</li>
-            <li><strong>Methods:</strong> PLD thin-film growth &amp; low-temperature Raman</li>
-            <li><strong>Systems:</strong> Multiferroics, quantum spin liquids</li>
-          </ul>
         </div>
+        <dl class="facts">
+          <div><dt>Advisor</dt><dd>Dr. Kaushik Sen</dd></div>
+          <div><dt>Institute</dt><dd>IIT Delhi</dd></div>
+          <div><dt>Methods</dt><dd>PLD thin-film growth, low-temperature Raman</dd></div>
+          <div><dt>Systems</dt><dd>Multiferroics, quantum spin liquids</dd></div>
+        </dl>
       </div>
     </section>
 
-    <!-- HIGHLIGHTS -->
-    <section class="section section--alt">
-      <div class="container">
-        <h2 class="section__title reveal">At a glance</h2>
-        <div class="cards">
-          <article class="card reveal">
-            <h3>Research</h3>
-            <p>PLD thin-film growth and low-temperature Raman on multiferroics and quantum spin liquid candidates.</p>
-            <p style="margin-top:0.75rem"><a href="research.html">Explore research →</a></p>
-          </article>
-          <article class="card reveal">
-            <h3>Publications</h3>
-            <p>Peer-reviewed work on quantum materials and their excitations.</p>
-            <p style="margin-top:0.75rem"><a href="publications.html">See publications →</a></p>
-          </article>
-          <article class="card reveal">
-            <h3>Beyond the Lab</h3>
-            <p>Electronics, programming, and embedded development.</p>
-            <p style="margin-top:0.75rem"><a href="beyond.html">See projects →</a></p>
-          </article>
-        </div>
+    <!-- RESEARCH STRIP -->
+    <section class="section container">
+      <div class="section__head">
+        <h2 class="section__title reveal">Research</h2>
+        <a href="research.html">All directions</a>
       </div>
+      <div class="strip reveal">
+        <div><h3>Multiferroics</h3><p>Spin-phonon and magnetoelectric coupling through phonon anomalies.</p></div>
+        <div><h3>Spin liquids</h3><p>Continuum excitations in frustrated magnets.</p></div>
+        <div><h3>Cryogenic Raman</h3><p>Temperature and polarization-resolved spectra.</p></div>
+        <div><h3>PLD films</h3><p>Sample-tailored thin films for spectroscopy.</p></div>
+      </div>
+    </section>
+
+    <!-- LATEST PUBLICATIONS -->
+    <section class="section container">
+      <div class="section__head">
+        <h2 class="section__title reveal">Publications</h2>
+        <a href="publications.html">Full list</a>
+      </div>
+      <ol class="pubs reveal">
+        <li class="pub">
+          <span class="pub__year">2026</span>
+          <div>
+            <p class="pub__title">Negative thermal expansion, lattice dynamics, and complex magnetism in TbFeO<sub>3</sub></p>
+            <p class="pub__authors"><strong>Shubham Farswan</strong>, Reshma Kumawat, Dipankar Sarkar, Deeksha Singh, Md. Atif Hasan, Devajyoti Mukherjee, Kaushik Sen</p>
+          </div>
+          <div class="pub__side">
+            <p class="pub__venue"><em>Physical Review B</em></p>
+            <span class="pub__links"><a href="https://doi.org/10.1103/dmqs-y92y" target="_blank" rel="noopener">DOI</a></span>
+          </div>
+        </li>
+        <li class="pub">
+          <span class="pub__year">2026</span>
+          <div>
+            <p class="pub__title">Nonadiabatic phonon renormalization in metallic versus insulating rutile oxides</p>
+            <p class="pub__authors">Reshma Kumawat, <strong>Shubham Farswan</strong>, Simranjeet Kaur, Kaushik Sen</p>
+          </div>
+          <div class="pub__side">
+            <p class="pub__venue"><em>Physical Review B</em> 113, 214320</p>
+            <span class="pub__links"><a href="https://doi.org/10.1103/4nhr-dvbn" target="_blank" rel="noopener">DOI</a></span>
+          </div>
+        </li>
+        <li class="pub">
+          <span class="pub__year">2024</span>
+          <div>
+            <p class="pub__title">Potential of Raman scattering in probing magnetic excitations and their coupling to lattice dynamics</p>
+            <p class="pub__authors">Reshma Kumawat, <strong>Shubham Farswan</strong>, Simranjeet Kaur, Smriti Bhatia, Kaushik Sen</p>
+          </div>
+          <div class="pub__side">
+            <p class="pub__venue"><em>J. Phys.: Condens. Matter</em> 36, 493001</p>
+            <span class="pub__links"><a href="https://doi.org/10.1088/1361-648X/ad75db" target="_blank" rel="noopener">DOI</a></span>
+          </div>
+        </li>
+      </ol>
     </section>
   </main>
 
   <footer id="contact" class="footer">
     <div class="container">
-      <h2 class="footer__title">Get in touch</h2>
-      <p class="footer__line">
-        Interested in collaborating on quantum materials, Raman spectroscopy, or an
-        electronics / coding project? I'm always happy to talk - reach me at:
-      </p>
-      <p class="footer__line"><a href="mailto:shubham.phy14@gmail.com">shubham.phy14@gmail.com</a></p>
-      <p class="footer__line footer__addr">
-        Department of Physics · IIT Delhi · Hauz Khas, New Delhi 110016, India
-      </p>
-      <p class="footer__social">
-        <a href="https://scholar.google.com/citations?user=ZnzBCkEAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
-        <a href="https://www.linkedin.com/in/shubham-farswan-15290a195/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com/shubham-farswan" target="_blank" rel="noopener">GitHub</a>
-      </p>
-      <p class="footer__copy">© <span id="year"></span> Shubham Farswan. Hosted on GitHub Pages.</p>
+      <p class="footer__big">Let's talk.</p>
+      <p class="muted">Collaborations on quantum materials, Raman spectroscopy, or an electronics / coding project.</p>
+      <a class="footer__email" href="mailto:shubham.phy14@gmail.com">shubham.phy14@gmail.com</a>
+      <div class="footer__grid">
+        <div>
+          <p>Department of Physics, IIT Delhi, Hauz Khas, New Delhi 110016, India</p>
+          <p>&copy; <span id="year"></span> Shubham Farswan. Hosted on GitHub Pages.</p>
+        </div>
+        <div class="link-row">
+          <a href="https://scholar.google.com/citations?user=ZnzBCkEAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+          <a href="https://www.linkedin.com/in/shubham-farswan-15290a195/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/shubham-farswan" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
     </div>
   </footer>
 
