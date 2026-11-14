@@ -3,36 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Publications - Shubham Farswan</title>
+  <title data-i18n="title.pubs">Publications - Shubham Farswan</title>
   <meta name="description" content="Publications by Shubham Farswan, PhD research scholar at IIT Delhi." />
   <meta name="color-scheme" content="light dark" />
+  <script>try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header class="site-header">
     <nav class="nav">
       <a class="nav__brand" href="index.html" aria-label="Shubham Farswan, home">SF</a>
-      <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
       <ul class="nav__links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="publications.html" aria-current="page">Publications</a></li>
-        <li><a href="beyond.html">Beyond the Lab</a></li>
-        <li><a href="mailto:shubham.phy14@gmail.com">Contact</a></li>
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="research.html" data-i18n="nav.research">Research</a></li>
+        <li><a href="publications.html" aria-current="page" data-i18n="nav.pubs">Publications</a></li>
+        <li><a href="beyond.html" data-i18n="nav.beyond">Beyond the Lab</a></li>
+        <li><a href="mailto:shubham.phy14@gmail.com" data-i18n="nav.contact">Contact</a></li>
       </ul>
+      <div class="nav__tools">
+        <label class="chip">
+          <i class="ph ph-translate" aria-hidden="true"></i>
+          <span class="sr-only" data-i18n="ui.lang">Language</span>
+          <select id="lang-select">
+            <option value="en">EN</option><option value="zh">中文</option><option value="fr">FR</option><option value="es">ES</option>
+          </select>
+        </label>
+        <button class="chip theme-toggle" type="button" aria-label="Toggle dark mode" data-i18n-aria="ui.theme">
+          <i class="ph ph-moon" aria-hidden="true"></i><i class="ph ph-sun" aria-hidden="true"></i>
+        </button>
+        <button class="nav__toggle" aria-label="Toggle navigation" data-i18n-aria="ui.menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </nav>
   </header>
 
   <main>
     <section class="page-hero container">
-      <h1 class="display"><span>Publications</span></h1>
-      <p class="page-hero__lead">
+      <h1 class="display"><span data-i18n="pubs.title">Publications</span></h1>
+      <p class="page-hero__lead" data-i18n="pubs.lead">
         For the most up-to-date list, see my
         <a href="https://scholar.google.com/citations?user=ZnzBCkEAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
         profile. <sup>&dagger;</sup> denotes equal contribution.
@@ -51,7 +65,7 @@
             <p class="pub__venue"><em>Physical Review B</em> <strong>XX</strong>, xx</p>
             <span class="pub__links">
               <a href="https://doi.org/10.1103/dmqs-y92y" target="_blank" rel="noopener">DOI</a>
-              <a href="https://link.aps.org/doi/10.1103/dmqs-y92y" target="_blank" rel="noopener">Journal</a>
+              <a href="https://link.aps.org/doi/10.1103/dmqs-y92y" target="_blank" rel="noopener" data-i18n="pub.journal">Journal</a>
             </span>
           </div>
         </li>
@@ -65,7 +79,7 @@
             <p class="pub__venue"><em>Physical Review B</em> <strong>113</strong>, 214320</p>
             <span class="pub__links">
               <a href="https://doi.org/10.1103/4nhr-dvbn" target="_blank" rel="noopener">DOI</a>
-              <a href="https://link.aps.org/doi/10.1103/4nhr-dvbn" target="_blank" rel="noopener">Journal</a>
+              <a href="https://link.aps.org/doi/10.1103/4nhr-dvbn" target="_blank" rel="noopener" data-i18n="pub.journal">Journal</a>
             </span>
           </div>
         </li>
@@ -79,7 +93,7 @@
             <p class="pub__venue"><em>J. Phys.: Condens. Matter</em> <strong>36</strong>, 493001</p>
             <span class="pub__links">
               <a href="https://doi.org/10.1088/1361-648X/ad75db" target="_blank" rel="noopener">DOI</a>
-              <a href="https://iopscience.iop.org/article/10.1088/1361-648X/ad75db" target="_blank" rel="noopener">Journal</a>
+              <a href="https://iopscience.iop.org/article/10.1088/1361-648X/ad75db" target="_blank" rel="noopener" data-i18n="pub.journal">Journal</a>
             </span>
           </div>
         </li>
@@ -89,13 +103,13 @@
 
   <footer id="contact" class="footer">
     <div class="container">
-      <p class="footer__big">Let's talk.</p>
-      <p class="muted">Collaborations on quantum materials, Raman spectroscopy, or an electronics / coding project.</p>
+      <p class="footer__big" data-i18n="footer.talk">Let's talk.</p>
+      <p class="muted" data-i18n="footer.blurb">Collaborations on quantum materials, Raman spectroscopy, or an electronics / coding project.</p>
       <a class="footer__email" href="mailto:shubham.phy14@gmail.com">shubham.phy14@gmail.com</a>
       <div class="footer__grid">
         <div>
-          <p>Department of Physics, IIT Delhi, Hauz Khas, New Delhi 110016, India</p>
-          <p>&copy; <span id="year"></span> Shubham Farswan. Hosted on GitHub Pages.</p>
+          <p data-i18n="footer.addr">Department of Physics, IIT Delhi, Hauz Khas, New Delhi 110016, India</p>
+          <p>&copy; <span id="year"></span> Shubham Farswan. <span data-i18n="footer.hosted">Hosted on GitHub Pages.</span></p>
         </div>
         <div class="link-row">
           <a href="https://scholar.google.com/citations?user=ZnzBCkEAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
@@ -106,6 +120,7 @@
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

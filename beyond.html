@@ -3,36 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Beyond the Lab - Shubham Farswan</title>
+  <title data-i18n="title.beyond">Beyond the Lab - Shubham Farswan</title>
   <meta name="description" content="Electronics, programming, app development, and embedded systems projects by Shubham Farswan." />
   <meta name="color-scheme" content="light dark" />
+  <script>try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header class="site-header">
     <nav class="nav">
       <a class="nav__brand" href="index.html" aria-label="Shubham Farswan, home">SF</a>
-      <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
       <ul class="nav__links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="beyond.html" aria-current="page">Beyond the Lab</a></li>
-        <li><a href="mailto:shubham.phy14@gmail.com">Contact</a></li>
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="research.html" data-i18n="nav.research">Research</a></li>
+        <li><a href="publications.html" data-i18n="nav.pubs">Publications</a></li>
+        <li><a href="beyond.html" aria-current="page" data-i18n="nav.beyond">Beyond the Lab</a></li>
+        <li><a href="mailto:shubham.phy14@gmail.com" data-i18n="nav.contact">Contact</a></li>
       </ul>
+      <div class="nav__tools">
+        <label class="chip">
+          <i class="ph ph-translate" aria-hidden="true"></i>
+          <span class="sr-only" data-i18n="ui.lang">Language</span>
+          <select id="lang-select">
+            <option value="en">EN</option><option value="zh">中文</option><option value="fr">FR</option><option value="es">ES</option>
+          </select>
+        </label>
+        <button class="chip theme-toggle" type="button" aria-label="Toggle dark mode" data-i18n-aria="ui.theme">
+          <i class="ph ph-moon" aria-hidden="true"></i><i class="ph ph-sun" aria-hidden="true"></i>
+        </button>
+        <button class="nav__toggle" aria-label="Toggle navigation" data-i18n-aria="ui.menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </nav>
   </header>
 
   <main>
     <section class="page-hero container">
-      <h1 class="display"><span>Beyond</span><span>the Lab</span></h1>
-      <p class="page-hero__lead">
+      <h1 class="display"><span data-i18n="beyond.h1a">Beyond</span><span data-i18n="beyond.h1b">the Lab</span></h1>
+      <p class="page-hero__lead" data-i18n="beyond.lead">
         Outside of physics, I like designing and building things end-to-end,
         from circuits to firmware to apps. A running instrument in the lab is
         often as much electronics and code as it is physics.
@@ -40,30 +54,30 @@
     </section>
 
     <section class="section container">
-      <h2 class="section__title reveal">What I build</h2>
+      <h2 class="section__title reveal" data-i18n="build.title">What I build</h2>
       <div class="strip reveal">
         <div>
-          <h3>Electronics</h3>
-          <p>Analog and digital circuit design, PCB layout, sensors, and instrumentation for measurement and control.</p>
+          <h3 data-i18n="b1.t">Electronics</h3>
+          <p data-i18n="b1.d">Analog and digital circuit design, PCB layout, sensors, and instrumentation for measurement and control.</p>
         </div>
         <div>
-          <h3>Programming</h3>
-          <p>Data acquisition, analysis, and automation. Python for scientific computing, plus general-purpose scripting and tooling.</p>
+          <h3 data-i18n="b2.t">Programming</h3>
+          <p data-i18n="b2.d">Data acquisition, analysis, and automation. Python for scientific computing, plus general-purpose scripting and tooling.</p>
         </div>
         <div>
-          <h3>App Development</h3>
-          <p>Building desktop and web applications for lab utilities.</p>
+          <h3 data-i18n="b3.t">App Development</h3>
+          <p data-i18n="b3.d">Building desktop and web applications for lab utilities.</p>
         </div>
         <div>
-          <h3>Embedded Systems</h3>
-          <p>Microcontroller firmware (Arduino, ESP32, STM32), real-time control, and hardware-software integration.</p>
+          <h3 data-i18n="b4.t">Embedded Systems</h3>
+          <p data-i18n="b4.d">Microcontroller firmware (Arduino, ESP32, STM32), real-time control, and hardware-software integration.</p>
         </div>
       </div>
     </section>
 
     <section class="section container">
-      <h2 class="section__title reveal">Selected projects</h2>
-      <p class="prose muted reveal">
+      <h2 class="section__title reveal" data-i18n="projects.title">Selected projects</h2>
+      <p class="prose muted reveal" data-i18n="projects.lead">
         Both of these grew out of everyday problems in the lab: an instrument that
         was tedious to drive by hand, and an analysis that was being rebuilt from
         scratch for every new sample. They live on my
@@ -73,13 +87,13 @@
       <article class="project reveal">
         <div>
           <h3>Lake Shore 335 Controller GUI</h3>
-          <a class="cta" href="https://github.com/shubham-farswan/Lakeshore-GUI" target="_blank" rel="noopener">View repo <i aria-hidden="true">&#8599;</i></a>
+          <a class="cta" href="https://github.com/shubham-farswan/Lakeshore-GUI" target="_blank" rel="noopener"><span data-i18n="cta.repo">View repo</span> <i aria-hidden="true">&#8599;</i></a>
         </div>
         <div>
           <ul class="pills">
             <li>Python</li><li>PyQt5</li><li>pySerial</li><li>Matplotlib</li><li>PyInstaller</li>
           </ul>
-          <p>
+          <p data-i18n="p1.desc">
             A standalone Windows desktop application for the Lake Shore Model 335
             cryogenic temperature controller, written in Python with PyQt5. It scans for
             available COM ports, connects to the instrument over serial, and polls it in
@@ -96,13 +110,13 @@
       <article class="project reveal">
         <div>
           <h3>RamanSuite</h3>
-          <a class="cta" href="https://github.com/shubham-farswan/RamanSuite" target="_blank" rel="noopener">View repo <i aria-hidden="true">&#8599;</i></a>
+          <a class="cta" href="https://github.com/shubham-farswan/RamanSuite" target="_blank" rel="noopener"><span data-i18n="cta.repo">View repo</span> <i aria-hidden="true">&#8599;</i></a>
         </div>
         <div>
           <ul class="pills">
-            <li>MATLAB</li><li>Programmatic app</li><li>Curve fitting</li><li>Instrument-agnostic file I/O</li>
+            <li>MATLAB</li><li data-i18n="pill.app">Programmatic app</li><li data-i18n="pill.fit">Curve fitting</li><li data-i18n="pill.io">Instrument-agnostic file I/O</li>
           </ul>
-          <p>
+          <p data-i18n="p2.desc">
             A general-purpose Raman spectroscopy analysis application for MATLAB, built
             around a single data structure that covers a spectral series taken against
             any variable: temperature, pressure, electric field. So an analysis
@@ -123,13 +137,13 @@
 
   <footer id="contact" class="footer">
     <div class="container">
-      <p class="footer__big">Let's talk.</p>
-      <p class="muted">Collaborations on quantum materials, Raman spectroscopy, or an electronics / coding project.</p>
+      <p class="footer__big" data-i18n="footer.talk">Let's talk.</p>
+      <p class="muted" data-i18n="footer.blurb">Collaborations on quantum materials, Raman spectroscopy, or an electronics / coding project.</p>
       <a class="footer__email" href="mailto:shubham.phy14@gmail.com">shubham.phy14@gmail.com</a>
       <div class="footer__grid">
         <div>
-          <p>Department of Physics, IIT Delhi, Hauz Khas, New Delhi 110016, India</p>
-          <p>&copy; <span id="year"></span> Shubham Farswan. Hosted on GitHub Pages.</p>
+          <p data-i18n="footer.addr">Department of Physics, IIT Delhi, Hauz Khas, New Delhi 110016, India</p>
+          <p>&copy; <span id="year"></span> Shubham Farswan. <span data-i18n="footer.hosted">Hosted on GitHub Pages.</span></p>
         </div>
         <div class="link-row">
           <a href="https://scholar.google.com/citations?user=ZnzBCkEAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
@@ -140,6 +154,7 @@
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

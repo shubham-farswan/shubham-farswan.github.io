@@ -3,36 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Research - Shubham Farswan</title>
+  <title data-i18n="title.research">Research - Shubham Farswan</title>
   <meta name="description" content="Research of Shubham Farswan: low-temperature Raman spectroscopy of multiferroics and quantum spin liquid candidates." />
   <meta name="color-scheme" content="light dark" />
+  <script>try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header class="site-header">
     <nav class="nav">
       <a class="nav__brand" href="index.html" aria-label="Shubham Farswan, home">SF</a>
-      <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
       <ul class="nav__links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="research.html" aria-current="page">Research</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="beyond.html">Beyond the Lab</a></li>
-        <li><a href="mailto:shubham.phy14@gmail.com">Contact</a></li>
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="research.html" aria-current="page" data-i18n="nav.research">Research</a></li>
+        <li><a href="publications.html" data-i18n="nav.pubs">Publications</a></li>
+        <li><a href="beyond.html" data-i18n="nav.beyond">Beyond the Lab</a></li>
+        <li><a href="mailto:shubham.phy14@gmail.com" data-i18n="nav.contact">Contact</a></li>
       </ul>
+      <div class="nav__tools">
+        <label class="chip">
+          <i class="ph ph-translate" aria-hidden="true"></i>
+          <span class="sr-only" data-i18n="ui.lang">Language</span>
+          <select id="lang-select">
+            <option value="en">EN</option><option value="zh">中文</option><option value="fr">FR</option><option value="es">ES</option>
+          </select>
+        </label>
+        <button class="chip theme-toggle" type="button" aria-label="Toggle dark mode" data-i18n-aria="ui.theme">
+          <i class="ph ph-moon" aria-hidden="true"></i><i class="ph ph-sun" aria-hidden="true"></i>
+        </button>
+        <button class="nav__toggle" aria-label="Toggle navigation" data-i18n-aria="ui.menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </nav>
   </header>
 
   <main>
     <section class="page-hero container">
-      <h1 class="display"><span>Research</span></h1>
-      <p class="page-hero__lead">
+      <h1 class="display"><span data-i18n="research.title">Research</span></h1>
+      <p class="page-hero__lead" data-i18n="research.lead">
         I grow quantum-material thin films by pulsed laser deposition and study
         them with temperature and polarization-dependent Raman scattering, down
         to cryogenic temperatures, tracking phonons, magnons, and their coupling
@@ -41,33 +55,33 @@
     </section>
 
     <section class="section container">
-      <h2 class="section__title reveal">Current directions</h2>
+      <h2 class="section__title reveal" data-i18n="research.current">Current directions</h2>
       <div class="tiles">
         <article class="tile tile--accent reveal">
-          <h3>Multiferroics</h3>
-          <p>
+          <h3 data-i18n="area1.t">Multiferroics</h3>
+          <p data-i18n="r1.d">
             Spin-phonon and magnetoelectric coupling probed through phonon
             anomalies, symmetry breaking, and mode softening across magnetic and
             ferroelectric transitions.
           </p>
         </article>
         <article class="tile reveal">
-          <h3>Quantum spin liquid candidates</h3>
-          <p>
+          <h3 data-i18n="r2.t">Quantum spin liquid candidates</h3>
+          <p data-i18n="r2.d">
             Searching for signatures of fractionalized and continuum excitations
             in the magnetic Raman response of frustrated magnets.
           </p>
         </article>
         <article class="tile reveal">
-          <h3>Low-temperature Raman spectroscopy</h3>
-          <p>
+          <h3 data-i18n="r3.t">Low-temperature Raman spectroscopy</h3>
+          <p data-i18n="r3.d">
             Cryogenic, polarization-resolved measurements to disentangle lattice,
             spin, and electronic contributions to the scattered light.
           </p>
         </article>
         <article class="tile reveal">
-          <h3>Thin-film growth (PLD)</h3>
-          <p>
+          <h3 data-i18n="r4.t">Thin-film growth (PLD)</h3>
+          <p data-i18n="r4.d">
             Synthesizing high-quality thin films of quantum materials by pulsed
             laser deposition, enabling controlled, sample-tailored spectroscopy.
           </p>
@@ -94,30 +108,30 @@
     </section>
 
     <section class="section container">
-      <h2 class="section__title reveal">Techniques &amp; methods</h2>
+      <h2 class="section__title reveal" data-i18n="research.methods">Techniques &amp; methods</h2>
       <dl class="facts reveal">
-        <div><dt>Growth</dt><dd>Pulsed laser deposition (PLD) of thin films</dd></div>
-        <div><dt>Spectroscopy</dt><dd>Raman scattering, temperature and polarization-dependent</dd></div>
-        <div><dt>Environment</dt><dd>Cryogenic / low-temperature setups</dd></div>
+        <div><dt data-i18n="m.growth">Growth</dt><dd data-i18n="m.growth.v">Pulsed laser deposition (PLD) of thin films</dd></div>
+        <div><dt data-i18n="m.spec">Spectroscopy</dt><dd data-i18n="m.spec.v">Raman scattering, temperature and polarization-dependent</dd></div>
+        <div><dt data-i18n="m.env">Environment</dt><dd data-i18n="m.env.v">Cryogenic / low-temperature setups</dd></div>
         <!-- TODO: re-enable when I have papers on these
         <div><dt>Computation</dt><dd>Density functional theory (DFT), first-principles calculations</dd></div>
         <div><dt>Theory</dt><dd>Effective spin / lattice model Hamiltonians</dd></div>
         -->
-        <div><dt>Analysis</dt><dd>Phonon and magnon mode fitting, spin-phonon coupling</dd></div>
-        <div><dt>Systems</dt><dd>Multiferroics, frustrated magnets, QSL candidates</dd></div>
+        <div><dt data-i18n="m.analysis">Analysis</dt><dd data-i18n="m.analysis.v">Phonon and magnon mode fitting, spin-phonon coupling</dd></div>
+        <div><dt data-i18n="facts.systems">Systems</dt><dd data-i18n="m.systems.v">Multiferroics, frustrated magnets, QSL candidates</dd></div>
       </dl>
     </section>
   </main>
 
   <footer id="contact" class="footer">
     <div class="container">
-      <p class="footer__big">Let's talk.</p>
-      <p class="muted">Collaborations on quantum materials, Raman spectroscopy, or an electronics / coding project.</p>
+      <p class="footer__big" data-i18n="footer.talk">Let's talk.</p>
+      <p class="muted" data-i18n="footer.blurb">Collaborations on quantum materials, Raman spectroscopy, or an electronics / coding project.</p>
       <a class="footer__email" href="mailto:shubham.phy14@gmail.com">shubham.phy14@gmail.com</a>
       <div class="footer__grid">
         <div>
-          <p>Department of Physics, IIT Delhi, Hauz Khas, New Delhi 110016, India</p>
-          <p>&copy; <span id="year"></span> Shubham Farswan. Hosted on GitHub Pages.</p>
+          <p data-i18n="footer.addr">Department of Physics, IIT Delhi, Hauz Khas, New Delhi 110016, India</p>
+          <p>&copy; <span id="year"></span> Shubham Farswan. <span data-i18n="footer.hosted">Hosted on GitHub Pages.</span></p>
         </div>
         <div class="link-row">
           <a href="https://scholar.google.com/citations?user=ZnzBCkEAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
@@ -128,6 +142,7 @@
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

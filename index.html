@@ -3,32 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shubham Farswan - Low-Temperature Raman Spectroscopy of Quantum Materials</title>
+  <title data-i18n="title.home">Shubham Farswan - Low-Temperature Raman Spectroscopy of Quantum Materials</title>
   <meta name="description" content="Shubham Farswan, PhD research scholar at IIT Delhi studying multiferroics and quantum spin liquid candidates with low-temperature Raman spectroscopy." />
   <meta property="og:title" content="Shubham Farswan - Quantum Materials &amp; Raman Spectroscopy" />
   <meta property="og:description" content="PhD research scholar at IIT Delhi: low-temperature Raman spectroscopy of multiferroics and quantum spin liquid candidates." />
   <meta property="og:type" content="website" />
   <meta name="color-scheme" content="light dark" />
+  <script>try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header class="site-header">
     <nav class="nav">
       <a class="nav__brand" href="index.html" aria-label="Shubham Farswan, home">SF</a>
-      <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
       <ul class="nav__links">
-        <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="beyond.html">Beyond the Lab</a></li>
-        <li><a href="mailto:shubham.phy14@gmail.com">Contact</a></li>
+        <li><a href="index.html" aria-current="page" data-i18n="nav.home">Home</a></li>
+        <li><a href="research.html" data-i18n="nav.research">Research</a></li>
+        <li><a href="publications.html" data-i18n="nav.pubs">Publications</a></li>
+        <li><a href="beyond.html" data-i18n="nav.beyond">Beyond the Lab</a></li>
+        <li><a href="mailto:shubham.phy14@gmail.com" data-i18n="nav.contact">Contact</a></li>
       </ul>
+      <div class="nav__tools">
+        <label class="chip">
+          <i class="ph ph-translate" aria-hidden="true"></i>
+          <span class="sr-only" data-i18n="ui.lang">Language</span>
+          <select id="lang-select">
+            <option value="en">EN</option><option value="zh">中文</option><option value="fr">FR</option><option value="es">ES</option>
+          </select>
+        </label>
+        <button class="chip theme-toggle" type="button" aria-label="Toggle dark mode" data-i18n-aria="ui.theme">
+          <i class="ph ph-moon" aria-hidden="true"></i><i class="ph ph-sun" aria-hidden="true"></i>
+        </button>
+        <button class="nav__toggle" aria-label="Toggle navigation" data-i18n-aria="ui.menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </nav>
   </header>
 
@@ -38,13 +52,13 @@
       <h1 class="display"><span>Shubham</span><span>Farswan</span></h1>
       <div class="hero__row">
         <div>
-          <p class="hero__sub">Experimental physicist studying <mark>quantum materials</mark> with low-temperature Raman light scattering.</p>
+          <p class="hero__sub" data-i18n="home.sub">Experimental physicist studying <mark>quantum materials</mark> with low-temperature Raman light scattering.</p>
           <div class="actions">
-            <a class="cta" href="mailto:shubham.phy14@gmail.com">Email me <i aria-hidden="true">&#8599;</i></a>
-            <a href="assets/cv.pdf">Download CV</a>
+            <a class="cta" href="mailto:shubham.phy14@gmail.com"><span data-i18n="cta.email">Email me</span> <i aria-hidden="true">&#8599;</i></a>
+            <a href="assets/cv.pdf" data-i18n="cta.cv">Download CV</a>
           </div>
         </div>
-        <p class="hero__meta">
+        <p class="hero__meta" data-i18n="home.meta">
           PhD research scholar, Department of Physics, Indian Institute of Technology Delhi.
           Advised by Dr. Kaushik Sen.
         </p>
@@ -58,10 +72,10 @@
 
     <!-- ABOUT -->
     <section id="about" class="section container">
-      <h2 class="section__title reveal">About</h2>
+      <h2 class="section__title reveal" data-i18n="about.title">About</h2>
       <div class="about reveal">
         <div class="prose">
-          <p>
+          <p data-i18n="about.p1">
             I am a fourth-year PhD research scholar in the Department of Physics at
             the Indian Institute of Technology (IIT) Delhi, advised by
             <strong>Dr. Kaushik Sen</strong>. My research combines
@@ -74,7 +88,7 @@
             <strong>density functional theory (DFT)</strong> calculations.
             -->
           </p>
-          <p>
+          <p data-i18n="about.p2">
             I am especially interested in <strong>multiferroics</strong>, where
             magnetism and ferroelectricity coexist and couple, and in
             <strong>quantum spin liquid candidates</strong>, whose exotic magnetic
@@ -84,10 +98,10 @@
           </p>
         </div>
         <dl class="facts">
-          <div><dt>Advisor</dt><dd>Dr. Kaushik Sen</dd></div>
-          <div><dt>Institute</dt><dd>IIT Delhi</dd></div>
-          <div><dt>Methods</dt><dd>PLD thin-film growth, low-temperature Raman</dd></div>
-          <div><dt>Systems</dt><dd>Multiferroics, quantum spin liquids</dd></div>
+          <div><dt data-i18n="facts.advisor">Advisor</dt><dd>Dr. Kaushik Sen</dd></div>
+          <div><dt data-i18n="facts.institute">Institute</dt><dd>IIT Delhi</dd></div>
+          <div><dt data-i18n="facts.methods">Methods</dt><dd data-i18n="facts.methods.v">PLD thin-film growth, low-temperature Raman</dd></div>
+          <div><dt data-i18n="facts.systems">Systems</dt><dd data-i18n="facts.systems.v">Multiferroics, quantum spin liquids</dd></div>
         </dl>
       </div>
     </section>
@@ -95,22 +109,22 @@
     <!-- RESEARCH STRIP -->
     <section class="section container">
       <div class="section__head">
-        <h2 class="section__title reveal">Research</h2>
-        <a href="research.html">All directions</a>
+        <h2 class="section__title reveal" data-i18n="research.title">Research</h2>
+        <a href="research.html" data-i18n="research.all">All directions</a>
       </div>
       <div class="strip reveal">
-        <div><h3>Multiferroics</h3><p>Spin-phonon and magnetoelectric coupling through phonon anomalies.</p></div>
-        <div><h3>Spin liquids</h3><p>Continuum excitations in frustrated magnets.</p></div>
-        <div><h3>Cryogenic Raman</h3><p>Temperature and polarization-resolved spectra.</p></div>
-        <div><h3>PLD films</h3><p>Sample-tailored thin films for spectroscopy.</p></div>
+        <div><h3 data-i18n="area1.t">Multiferroics</h3><p data-i18n="area1.d">Spin-phonon and magnetoelectric coupling through phonon anomalies.</p></div>
+        <div><h3 data-i18n="area2.t">Spin liquids</h3><p data-i18n="area2.d">Continuum excitations in frustrated magnets.</p></div>
+        <div><h3 data-i18n="area3.t">Cryogenic Raman</h3><p data-i18n="area3.d">Temperature and polarization-resolved spectra.</p></div>
+        <div><h3 data-i18n="area4.t">PLD films</h3><p data-i18n="area4.d">Sample-tailored thin films for spectroscopy.</p></div>
       </div>
     </section>
 
     <!-- LATEST PUBLICATIONS -->
     <section class="section container">
       <div class="section__head">
-        <h2 class="section__title reveal">Publications</h2>
-        <a href="publications.html">Full list</a>
+        <h2 class="section__title reveal" data-i18n="pubs.title">Publications</h2>
+        <a href="publications.html" data-i18n="pubs.full">Full list</a>
       </div>
       <ol class="pubs reveal">
         <li class="pub">
@@ -152,13 +166,13 @@
 
   <footer id="contact" class="footer">
     <div class="container">
-      <p class="footer__big">Let's talk.</p>
-      <p class="muted">Collaborations on quantum materials, Raman spectroscopy, or an electronics / coding project.</p>
+      <p class="footer__big" data-i18n="footer.talk">Let's talk.</p>
+      <p class="muted" data-i18n="footer.blurb">Collaborations on quantum materials, Raman spectroscopy, or an electronics / coding project.</p>
       <a class="footer__email" href="mailto:shubham.phy14@gmail.com">shubham.phy14@gmail.com</a>
       <div class="footer__grid">
         <div>
-          <p>Department of Physics, IIT Delhi, Hauz Khas, New Delhi 110016, India</p>
-          <p>&copy; <span id="year"></span> Shubham Farswan. Hosted on GitHub Pages.</p>
+          <p data-i18n="footer.addr">Department of Physics, IIT Delhi, Hauz Khas, New Delhi 110016, India</p>
+          <p>&copy; <span id="year"></span> Shubham Farswan. <span data-i18n="footer.hosted">Hosted on GitHub Pages.</span></p>
         </div>
         <div class="link-row">
           <a href="https://scholar.google.com/citations?user=ZnzBCkEAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
@@ -169,6 +183,7 @@
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
