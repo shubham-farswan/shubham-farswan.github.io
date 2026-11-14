@@ -66,9 +66,20 @@ a:hover { background: var(--accent); color: var(--on-accent); text-decoration: n
 }
 .chip:hover { border-color: var(--ink); }
 .chip .ph { font-size: 18px; }
-.chip select { appearance: none; border: 0; background: transparent; color: inherit; font: inherit; cursor: pointer; padding: 0; }
-.chip select:focus-visible { outline: none; }
-.chip:has(select:focus-visible) { outline: 2px solid var(--ink); outline-offset: 2px; }
+/* Language picker: native <select> fills the whole pill; icons sit on top, click-through */
+.lang { position: relative; padding: 0; }
+.lang .ph { position: absolute; top: 50%; transform: translateY(-50%); pointer-events: none; }
+.lang .ph-translate { left: 10px; }
+.lang .ph-caret-down { right: 9px; font-size: 12px; }
+.lang select {
+  appearance: none; -webkit-appearance: none;
+  height: 100%; padding: 0 28px 0 34px; border: 0; border-radius: 999px;
+  background: transparent; color: inherit; font: inherit; cursor: pointer;
+}
+/* Open list: give options a real surface so they stay readable in both themes */
+.lang option { background-color: var(--bg); color: var(--ink); }
+.lang select:focus-visible { outline: none; }
+.lang:has(select:focus-visible) { outline: 2px solid var(--ink); outline-offset: 2px; }
 .theme-toggle { width: 36px; padding: 0; justify-content: center; }
 .theme-toggle .ph-sun { display: none; }
 :root[data-theme="dark"] .theme-toggle .ph-sun { display: inline; }
