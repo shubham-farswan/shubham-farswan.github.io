@@ -93,11 +93,15 @@ a:hover { background: var(--accent); color: var(--on-accent); text-decoration: n
 /* Chinese: CJK glyphs need normal tracking and a bit more leading */
 :lang(zh) .display, :lang(zh) h2, :lang(zh) h3, :lang(zh) .footer__big { letter-spacing: 0; }
 :lang(zh) .display { line-height: 1.05; }
-.nav__links a { display: block; padding: 5px 12px; border-radius: 999px; font-size: 15px; font-weight: 500; text-decoration: none; transition: background .2s; }
+.nav__links a { display: block; white-space: nowrap; padding: 5px 12px; border-radius: 999px; font-size: 15px; font-weight: 500; text-decoration: none; transition: background .2s; }
 .nav__links a:hover { background: color-mix(in srgb, var(--ink) 8%, transparent); color: var(--ink); }
 .nav__links a[aria-current="page"] { background: var(--accent); color: var(--on-accent); }
-.nav__toggle { display: none; flex-direction: column; gap: 5px; background: none; border: 0; cursor: pointer; padding: 8px; }
-.nav__toggle span { width: 22px; height: 2px; background: var(--ink); transition: transform .25s var(--ease); }
+.nav__toggle {
+  display: none; flex-direction: column; justify-content: center; align-items: center; gap: 5px;
+  width: 36px; height: 36px; padding: 0; margin-left: 2px;
+  background: none; border: 1px solid var(--line); border-radius: 999px; cursor: pointer;
+}
+.nav__toggle span { width: 16px; height: 2px; background: var(--ink); transition: transform .25s var(--ease); }
 .nav__toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .nav__toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
 .nav__toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
@@ -152,7 +156,9 @@ mark { background: var(--accent); color: var(--on-accent); padding: 0 .2em; bord
 /* ---------------------------- Sections ------------------------- */
 .section { padding-top: 72px; }
 .section__title { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; letter-spacing: -0.04em; margin-bottom: 28px; }
-.section__head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+.section__head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0 16px; margin-bottom: 28px; }
+.section__head .section__title { margin-bottom: 0; }
+.section__head > a { white-space: nowrap; }
 .prose { max-width: 64ch; }
 .prose strong { font-weight: 600; }
 
@@ -250,6 +256,23 @@ mark { background: var(--accent); color: var(--on-accent); padding: 0 .2em; bord
   .hero__sub { font-size: 1.8rem; }
   .section { padding-top: 120px; }
 }
+/* Collapsed menu: 5 links + tools need ~760px in the longest language (es), so switch at 900 */
+@media (max-width: 899px) {
+  .nav__toggle { display: flex; }
+  .nav__links {
+    position: absolute; top: 100%; left: 0; right: 0; margin: 0;
+    flex-direction: column; gap: 4px; padding: 0 var(--pad);
+    background: var(--bg);
+    max-height: 0; overflow: hidden; visibility: hidden;
+    transition: max-height .3s var(--ease), padding .3s var(--ease), visibility 0s .3s;
+  }
+  .nav__links.open {
+    max-height: 360px; padding: 8px var(--pad) 16px; visibility: visible; transition-delay: 0s;
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 16px 24px -12px color-mix(in srgb, var(--ink) 18%, transparent);
+  }
+  .nav__links a { padding: 10px 14px; font-size: 17px; }
+}
 @media (max-width: 1023px) {
   .hero__row { grid-template-columns: 1fr 1fr; }
   .hero__row > :first-child { grid-column: 1 / -1; }
@@ -265,15 +288,6 @@ mark { background: var(--accent); color: var(--on-accent); padding: 0 .2em; bord
 @media (max-width: 640px) {
   :root { --pad: 16px; }
   .nav { height: 64px; }
-  .nav__toggle { display: flex; }
-  .nav__links {
-    position: absolute; top: 100%; left: 0; right: 0; margin: 0;
-    flex-direction: column; gap: 4px; padding: 0 var(--pad);
-    background: var(--bg); border-bottom: 1px solid var(--line);
-    max-height: 0; overflow: hidden; transition: max-height .3s var(--ease), padding .3s var(--ease);
-  }
-  .nav__links.open { max-height: 360px; padding: 8px var(--pad) 16px; }
-  .nav__links a { padding: 10px 14px; font-size: 17px; }
   .display { font-size: clamp(2.6rem, 16vw, 4.5rem); }
   .page-hero .display { font-size: clamp(2.4rem, 12.5vw, 3.6rem); }
   .hero__sub, .page-hero__lead { font-size: 1.2rem; }

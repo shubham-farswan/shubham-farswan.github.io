@@ -184,7 +184,7 @@ const I18N = {
     "p2.desc": "Une application générale d'analyse de spectroscopie Raman pour MATLAB, construite autour d'une structure de données unique qui couvre une série de spectres acquise en fonction de n'importe quelle variable : température, pression, champ électrique. Une analyse écrite une fois fonctionne donc pour toutes. La fenêtre est un pipeline en six étapes : charger un dossier de spectres, les corriger (courant d'obscurité, calibration en nombre d'onde, réponse instrumentale, facteur de Bose), ajuster un modèle composite à chaque spectre, suivre chaque pic le long de la série avec des indicateurs de qualité, ajuster la dépendance en température avec des modèles anharmoniques et de paramètre d'ordre, puis exporter une figure prête à publier avec les valeurs qui la sous-tendent. L'interface est une fine couche au-dessus d'une bibliothèque : chaque bouton est une fonction qu'on peut aussi appeler depuis un script. Chaque dossier de sortie garde la trace exacte de ce qui l'a produit, et rien n'est écrasé en silence.",
     "pill.app": "Application programmatique",
     "pill.fit": "Ajustement de courbes",
-    "pill.io": "E/S de fichiers indépendante de l'instrument",
+    "pill.io": "E/S multi-instruments",
   },
 
   es: {
@@ -275,7 +275,7 @@ const I18N = {
     "p2.desc": "Una aplicación de análisis de espectroscopía Raman de uso general para MATLAB, construida en torno a una única estructura de datos que cubre una serie espectral medida frente a cualquier variable: temperatura, presión, campo eléctrico. Así, un análisis escrito una vez sirve para todas. La ventana es un flujo de seis etapas: cargar una carpeta de espectros, corregirlos (corriente oscura, calibración de número de onda, respuesta instrumental, factor de Bose), ajustar un modelo compuesto a cada espectro, seguir cada pico a lo largo de la serie con indicadores de calidad, ajustar la dependencia con la temperatura con modelos anarmónicos y de parámetro de orden, y exportar una figura lista para publicar junto con los números que la respaldan. La interfaz es una capa fina sobre una biblioteca, así que cada botón es una función que también se puede llamar desde un script. Cada carpeta de resultados guarda un registro exacto de lo que la produjo, y nada se sobrescribe sin aviso.",
     "pill.app": "Aplicación programática",
     "pill.fit": "Ajuste de curvas",
-    "pill.io": "E/S de archivos independiente del instrumento",
+    "pill.io": "E/S multi-instrumento",
   },
 };
 
